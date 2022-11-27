@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+	<body>
+		<div class="header-info">
+			<h1>Adding Files to the database</h1>
+		</div>
+
+		<div class="body-info">
+            <h1>Overview</h1>
+			<p>
+                The GAIA Data Release 3 (GDR3) stores data for public use in comma seperated value (CSV)
+                files. The Aurvandil software reads these files, determines the HEALPix pixel each star lies in, 
+                then adds it to the respective pixel database.
+			</p>
+		</div>
+
+        <div class="body-info">
+            <h1>Technical Explanation</h1>
+			<p>
+                The Aurvandil software makes use of the <a href="https://healpix.sourceforge.io/">HEALPix Java library</a>
+                to organize the stars into pixels of equal area on the celestial sphere. The HEALPix library comes with
+                functionality to convert a set of coordinates to a location on the HEALPix sphere that correspondes to a
+                a specific pixel. The GAIA data release 3 (gdr3) stores the right ascension in degrees in a range of 0 to
+                360 degrees and the declination in degrees from -90 to 90 degrees. These values must be converted to HEALPix
+                coordinates that range from 0 to Pi for latitude and longitude. The star data is then added as a row to
+                the pixel's corresponding PostgreSQL database.
+
+			</p>
+		</div>
+
+        <div class="body-info">
+            <h1>Table of Contents</h1>
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="buildDestroy.html">Building and Destroying a HEALPix Sphere</a></li>
+                <li><a href="addFiles.html">Adding Files to the database</a></li>
+                <li><a href="coneSearch.html">Cone Searching the database</a></li>
+            </ul>
+		</div>
+	</body>
+</html>

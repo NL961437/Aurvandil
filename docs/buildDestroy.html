@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+	<body>
+		<div class="header-info">
+			<h1>Building and Destroying a HEALPix Sphere</h1>
+		</div>
+
+		<div class="body-info">
+            <h1>Overview</h1>
+			<p>
+                With the aid of the <a href="https://healpix.sourceforge.io/">HEALPix Java library</a>,
+                a sphere with equally sized tesselations can be created to allow for an even distribution
+                of stars across an imaginary HEALPix sphere.
+			</p>
+		</div>
+
+        <div class="body-info">
+            <h1>Creating a Sphere</h1>
+			<p>
+                Before attempting to destroy a sphere, ensure the target PostgreSQL database is currently
+                running and the database settings within Aurvandil are correct. In the Aurvandil software, select the
+                "Advanced Commands" dropdown in the top left of the window. Select "Build HEALPix Sphere" and an input
+                dialog will appear. Enter a valid number of nests for each HEALPix pixel (See the HEALPix Pixel Size
+                explanation below if you are unsure
+                what this means).
+			</p>
+		</div>
+
+        <div class="body-info">
+            <h1>Destroying a Sphere</h1>
+			<p>
+                Before attempting to destroy a sphere, ensure the target PostgreSQL database is currently
+                running and the database settings within Aurvandil are correct. In the Aurvandil software, select the
+                "Advanced Commands" dropdown in the top left of the window. Select "Destroy HEALPix Sphere" and a
+                confirmation dialog will appear. Select "Yes" to delete the HEALPix sphere from the database.
+			</p>
+		</div>
+
+        <div class="body-info">
+            <h1>HEALPix Pixel Size</h1>
+			<p>
+                The Aurvandil software has the ability to create an imaginary HEALPix sphere and then 
+                add each pixel of the sphere as a table to the target database. A HEALPix sphere with a nesting 
+                size of 1 has 12 individual pixels. Each additional nesting will divide each pixel into 
+                four separate pixels. (eg. nesting=2 has 48 pixels, nesting=3 has 192 pixels)
+			</p>
+		</div>
+
+        <div class="body-info">
+            <h1>Table of Contents</h1>
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="buildDestroy.html">Building and Destroying a HEALPix Sphere</a></li>
+                <li><a href="addFiles.html">Adding Files to the database</a></li>
+                <li><a href="coneSearch.html">Cone Searching the database</a></li>
+            </ul>
+		</div>
+	</body>
+</html>
