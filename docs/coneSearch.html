@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+	<body>
+		<div class="header-info">
+			<h1>Cone Searching</h1>
+		</div>
+
+		<div class="body-info">
+            <h1>Overview</h1>
+			<p>
+                Cone Searching works by casting an invisible cone onto a specific 
+                point in the sky (measured in right ascension and declination) with
+                a radius on the sky (measured in degrees).
+			</p>
+		</div>
+
+        <div class="body-info">
+            <h1>Technical Explanation</h1>
+			<p>
+                Because of the nature of longitudinal lines converging at the poles, a simple search 
+                for all stars within a specific number of degrees will return a strange result. This 
+                requires the use of a formula to be able to accurately determine how far a point is 
+                from another point on a sphere. A common formula for this is known as the Haversine 
+                formula. The Aurvandil software uses an imaginary sphere with a circumference of 
+                36000 units (1 degree = 100 units) to determine the distance a star is from the origin
+                point of the cone search. 
+			</p>
+		</div>
+
+        <div class="body-info">
+            <h1>Table of Contents</h1>
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="buildDestroy.html">Building and Destroying a HEALPix Sphere</a></li>
+                <li><a href="addFiles.html">Adding Files to the database</a></li>
+                <li><a href="coneSearch.html">Cone Searching the database</a></li>
+            </ul>
+		</div>
+	</body>
+</html>

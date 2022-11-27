@@ -1,0 +1,29 @@
+body {
+    background-image: url('background.jpeg');
+}
+
+div {
+    margin: auto;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    border: solid white 5px;
+    width: 66%;
+    margin-top: 5px
+
+}
+
+.header-info {
+    width: max-content;
+}
+
+.body-info {
+}
+
+p {
+    padding: 0 10px 0 10px;
+}
+
+h1 {
+    padding: 0 20px 0 20px;
+}
