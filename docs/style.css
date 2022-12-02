@@ -32,3 +32,7 @@ h1 {
 .page-header {
     margin: 10px 20px 10px 20px;
 }
+
+.bottom-padding {
+    margin-bottom: 10rem;
+}
