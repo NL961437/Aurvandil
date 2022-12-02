@@ -4,7 +4,7 @@
     </head>
 	<body>
 		<div class="header-info">
-			<h1>Cone Searching</h1>
+			<h1 class="page-header">Cone Searching</h1>
 		</div>
 
 		<div class="body-info">
@@ -20,7 +20,11 @@
             <h1>How To Query</h1>
             <p>
                 Before you begin, ensure that the target database is currently running. Enter the PostgreSQL
-                database ip address, port, 
+                database ip address, port, username and password into the database fields, and the right ascension
+                (0 to 360 degrees), declination (-90 to 90 degrees), and radius (in degrees) into the querying fields.
+                Click the query button and wait for the query to finish. The final query will be stored in the "Queries"
+                folder in the Aurvandil directory. If the program freezes, you may have too much data in too small of a
+                HEALPix nesting value. If this occurs, either use less data or increase the number of HEALPix nests.
             </p>
         </div>
 
@@ -44,7 +48,9 @@
                 <li><a href="buildDestroy.html">Building and Destroying a HEALPix Sphere</a></li>
                 <li><a href="addFiles.html">Adding Files to the database</a></li>
                 <li><a href="coneSearch.html">Cone Searching the database</a></li>
+                <li><a href="fileStructure.html">File Structure</a></li>
+                <li><a href="buildingPostgreSQL.html">Making a PostgreSQL database</a></li>
             </ul>
-		</div>
+        </div>
 	</body>
 </html>

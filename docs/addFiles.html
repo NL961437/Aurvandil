@@ -4,7 +4,7 @@
     </head>
 	<body>
 		<div class="header-info">
-			<h1>Adding Files to the database</h1>
+			<h1 class="page-header">Adding Files to the Database</h1>
 		</div>
 
 		<div class="body-info">
@@ -15,6 +15,21 @@
                 then adds it to the respective pixel database.
 			</p>
 		</div>
+
+        <div class="body-info">
+            <h1>Adding Files</h1>
+            <p>
+                Before you begin, ensure that the target database is currently running and enter the PostgreSQL
+                database ip address, port, username and password into the database fields. Click the "Advanced Commands"
+                cascading menu, and select "Add Files". A dialog will open up, confirm that the files you intend to commit
+                are in the "UncommittedFiles" folder and select "Yes". A progress dialog will appear to track the progress
+                of the commit. This process takes some time and if you intend to stop the commit, select "Cancel" in the
+                dialog. A cancelling dialog will appear to inform that the cancel operation has started and to not close
+                the program. Closing the program prior to the cancel operation finishing may result in either missing or
+                duplicate data in the database. Once the cancellation process is finished and closed, you may close the
+                program.
+            </p>
+        </div>
 
         <div class="body-info">
             <h1>Technical Explanation</h1>
@@ -37,7 +52,9 @@
                 <li><a href="buildDestroy.html">Building and Destroying a HEALPix Sphere</a></li>
                 <li><a href="addFiles.html">Adding Files to the database</a></li>
                 <li><a href="coneSearch.html">Cone Searching the database</a></li>
+                <li><a href="fileStructure.html">File Structure</a></li>
+                <li><a href="buildingPostgreSQL.html">Making a PostgreSQL database</a></li>
             </ul>
-		</div>
+        </div>
 	</body>
 </html>

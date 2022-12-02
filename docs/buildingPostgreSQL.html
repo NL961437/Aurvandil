@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+	<body>
+		<div class="header-info">
+			<h1 class="page-header">Building A PostgreSQL Database</h1>
+		</div>
+
+		<div class="body-info">
+            <h1>Overview</h1>
+			<p>
+                While it is recommended that an already existing database is used and the user has some experience with
+                PostgreSQL, there are a number of existing commands the user can utilize to quickly create a PostgreSQL
+                database to be used with Aurvandil.
+			</p>
+		</div>
+
+        <div class="body-info">
+            <h1>Windows</h1>
+			<p>
+                Within the Aurvandil directory, the folder labeled "UtilityToolsWindows" holds the commands to create,
+                start, and stop a PostgreSQL database cluster as well as the dependencies for PostgreSQL to allow for
+                portable use of the database. Running the "createDatabaseCluster.bat" batch file will create a new folder
+                in the Aurvandil directory labeled "PostgreSQLDatabase" and initialize a new cluster. Once the batch
+                window has closed the "startDatabaseCluster.bat" batch file can be run to start the database. The new
+                database will run on port "8080" and the superuser will be the name of the current Windows user. The
+                settings for this database in Aurvandil will be:<br><br>
+                Database IP: localhost<br>
+                Port: 8080<br>
+                Database Name: gaia<br>
+                Username: (CURRENT_WINDOWS_USER)<br>
+                Password: (empty)<br><br>
+
+                The database can be accessed directly by running the "connectToServer.bat" batch file. From here, new
+                users can be created, debugging, and other maintenance operations can be performed. It is recommended
+                that the user has some experience with PostgreSQL before connecting directly to the database cluster.
+                Tutorials and documentation can be found on the
+                <a href="https://www.postgresql.org/docs/15/index.html">PostgreSQL website</a>.
+			</p>
+		</div>
+
+        <div class="body-info">
+            <h1>Mac (OSX)</h1>
+            <p>
+                Within the Aurvandil directory, the folder labeled "UtilityToolsMac" holds the commands to create,
+                start, and stop a PostgreSQL database cluster as well as the dependencies for PostgreSQL to allow for
+                portable use of the database. Running the "createDatabaseCluster.sh" shell file will create a new folder
+                in the Aurvandil directory labeled "PostgreSQLDatabase" and initialize a new cluster. Once the shell
+                window has closed the "startDatabaseCluster.sh" shell file can be run to start the database. The new
+                database will run on port "8080" and the superuser will be the name of the current Mac user. The
+                settings for this database in Aurvandil will be:<br><br>
+                Database IP: localhost<br>
+                Port: 8080<br>
+                Database Name: gaia<br>
+                Username: (CURRENT_MAC_USER)<br>
+                Password: (empty)<br><br>
+
+                The database can be accessed directly by running the "connectToServer.sh" shell file. From here, new
+                users can be created, debugging, and other maintenance operations can be performed. It is recommended
+                that the user has some experience with PostgreSQL before connecting directly to the database cluster.
+                Tutorials and documentation can be found on the
+                <a href="https://www.postgresql.org/docs/15/index.html">PostgreSQL website</a>.
+            </p>
+        </div>
+
+        <div class="body-info">
+            <h1>Linux</h1>
+            <p>
+                Within the Aurvandil directory, the folder labeled "UtilityToolsLinux" holds the commands to create,
+                start, and stop a PostgreSQL database cluster. The dependencies for the Linux branch of PostgreSQL will
+                need to be downloaded from the <a href="https://www.postgresql.org/download/">PostgreSQL website</a>
+                Running the "createDatabaseCluster.sh" shell file will create a new folder
+                in the Aurvandil directory labeled "PostgreSQLDatabase" and initialize a new cluster. Once the shell
+                window has closed the "startDatabaseCluster.sh" shell file can be run to start the database. The new
+                database will run on port "8080" and the superuser will be the name of the current Linux user. The
+                settings for this database in Aurvandil will be:<br><br>
+                Database IP: localhost<br>
+                Port: 8080<br>
+                Database Name: gaia<br>
+                Username: (CURRENT_LINUX_USER)<br>
+                Password: (empty)<br><br>
+
+                The database can be accessed directly by running the "connectToServer.sh" shell file. From here, new
+                users can be created, debugging, and other maintenance operations can be performed. It is recommended
+                that the user has some experience with PostgreSQL before connecting directly to the database cluster.
+                Tutorials and documentation can be found on the
+                <a href="https://www.postgresql.org/docs/15/index.html">PostgreSQL website</a>.
+            </p>
+        </div>
+
+        <div class="body-info">
+            <h1>Table of Contents</h1>
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="buildDestroy.html">Building and Destroying a HEALPix Sphere</a></li>
+                <li><a href="addFiles.html">Adding Files to the database</a></li>
+                <li><a href="coneSearch.html">Cone Searching the database</a></li>
+                <li><a href="fileStructure.html">File Structure</a></li>
+                <li><a href="buildingPostgreSQL.html">Making a PostgreSQL database</a></li>
+            </ul>
+        </div>
+	</body>
+</html>

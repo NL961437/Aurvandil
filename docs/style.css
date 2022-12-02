@@ -15,6 +15,7 @@ div {
 
 .header-info {
     width: max-content;
+    font-size: 2rem;
 }
 
 .body-info {
@@ -26,4 +27,8 @@ p {
 
 h1 {
     padding: 0 20px 0 20px;
+}
+
+.page-header {
+    margin: 10px 20px 10px 20px;
 }
