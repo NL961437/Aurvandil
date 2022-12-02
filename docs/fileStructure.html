@@ -10,67 +10,56 @@
 		<div class="body-info">
             <h1>Overview</h1>
 			<p>
-                The <a href="https://github.com/NL961437/AurvandilSrc">Aurvandil Source Files</a>,
+                The <a href="https://github.com/NL961437/AurvandilSrc">Aurvandil Source Files</a>
                 are organized similar to the Java Spring Web Framework and helps promote a more
-                organized workspace.
+                organized workspace. The purpose of each of the packages is described in more detail below.
 			</p>
 		</div>
 
         <div class="body-info">
             <h1>Business Actions (BA)</h1>
 			<p>
-                Java files stored in the BA folder are designed to handle the main logic of the program.
-
+                Java files stored in the BA (Business Actions) package are designed to handle the main logic
+                of the program. Business actions in this program make queries and additions to the PostgreSQL
+                database and create HEALPix spheres.
 			</p>
-		</div>
-
-        <div class="body-info">
             <h1>Controllers</h1>
             <p>
-                Java files stored in the BA folder are designed to handle the main logic of the program.
-
+                The controllers package is responsible for controllers that delegate actions to the program
+                Business Actions (BA) package to complete the main functions of the program. In Aurvandil,
+                the actions controlled are adding files, counting stars, creating and destroying HEALPix
+                spheres, and running cone search queries.
             </p>
-        </div>
-
-        <div class="body-info">
             <h1>Data Access Objects (DAO)</h1>
             <p>
-                Java files stored in the BA folder are designed to handle the main logic of the program.
-
+                Data Access Objects handle the interactions between physical files and the information
+                in the program. Instances of this include objects to read GAIA source files and write
+                queries to CSV files.
             </p>
-        </div>
-
-        <div class="body-info">
             <h1>Graphical User Interface Objects (GUI)</h1>
             <p>
-                Java files stored in the BA folder are designed to handle the main logic of the program.
-
+                The Graphical User Interface (GUI) package handles the main Aurvandil GUI window that the user
+                will see. Responsible for building the fields to be used for querying, database selection, and
+                desired parameters.
             </p>
-        </div>
-
-        <div class="body-info">
             <h1>Action Listeners</h1>
             <p>
-                Java files stored in the BA folder are designed to handle the main logic of the program.
-
+                The Action Listeners package is found within the GUI package and is responsible for handling
+                a variety of button actions in the GUI such as the "Run Query" and saving settings on window
+                close.
             </p>
-        </div>
-
-        <div class="body-info">
             <h1>Utilities (Util)</h1>
             <p>
-                Java files stored in the BA folder are designed to handle the main logic of the program.
-
+                The Utilities package holds useful Java files with static methods that are routinely reused
+                in different parts of the program. Some of these responsibilities are file management utilities
+                and static methods to calculate and check values.
             </p>
-        </div>
-
-        <div class="body-info">
             <h1>Main Aurvandil Controller</h1>
             <p>
-                Java files stored in the BA folder are designed to handle the main logic of the program.
-
+                The main Aurvandil Controller is the Aurvandil.java file. The main controller handles the base
+                operations of the program and is best used for debugging different parts of the program.
             </p>
-        </div>
+		</div>
 
         <div class="body-info">
             <h1>Table of Contents</h1>
