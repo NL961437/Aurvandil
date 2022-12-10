@@ -10,14 +10,22 @@
             <h1>About</h1>
 			<p>
                 Aurvandil is a database software to store and access the star data from the GAIA archive. The current
-                version of the software is built to handle the Gaia Data Release 3 (GDR3). Current capabilities of the
-                software allow Aurvandil to build HEALPix sphere databses within PostgreSQL, add stars to that database
+                version of the software is built to handle the Gaia Data Release 3 (GDR3). Local access
+                of the data allows for significantly faster query times than remote queries to the ESA official GAIA
+                database. The faster queries allow for a more efficient workflow while using large sample datasets.
+                Current capabilities of the
+                software allow Aurvandil to build HEALPix sphere databases within PostgreSQL, add stars to that database
                 from the <a href="http://cdn.gea.esac.esa.int/Gaia/gdr3/gaia_source/">GAIA GDR3 source files</a>, and
-                cone search for stars with filters for any of the parameters listed in the GDR3 files. A version of
-                <a href="https://www.oracle.com/java/technologies/downloads/#java19">Java 19</a> or higher will
-                be required.
+                cone search for stars with filters for any of the parameters listed in the GDR3 files.
 			</p>
 		</div>
+        <div class="body-info">
+            <h1>Requirements</h1>
+            <ul>
+                <li><a href="https://www.oracle.com/java/technologies/downloads/#java19">Java 19</a> or higher</li>
+                <li><a href="https://www.oracle.com/java/technologies/downloads/#java19">PostgreSQL 15</a> for machines running Linux</li>
+            </ul>
+        </div>
         <div class="body-info">
             <h1>Useful Links</h1>
             <ul>
