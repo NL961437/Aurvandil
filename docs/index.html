@@ -7,18 +7,55 @@
 			<h1 class="page-header">AURVANDIL</h1>
 		</div>
 		<div class="body-info">
-            <h1>About</h1>
+            <h1>Overview</h1>
 			<p>
-                Aurvandil is a database software to store and access the star data from the GAIA archive. The current
-                version of the software is built to handle the Gaia Data Release 3 (GDR3). Local access
-                of the data allows for significantly faster query times than remote queries to the ESA official GAIA
-                database. The faster queries allow for a more efficient workflow while using large sample datasets.
-                Current capabilities of the
-                software allow Aurvandil to build HEALPix sphere databases within PostgreSQL, add stars to that database
-                from the <a href="http://cdn.gea.esac.esa.int/Gaia/gdr3/gaia_source/">GAIA GDR3 source files</a>, and
-                cone search for stars with filters for any of the parameters listed in the GDR3 files.
+                Aurvandil is a database software to store and access the star data from the GAIA satellite archive. The
+                current version of the software is built to handle the Gaia Data Release 3 (GDR3). Current capabilities
+                of the software allow Aurvandil to build HEALPix sphere databases within PostgreSQL, add stars to that
+                database from the
+                <a href="http://cdn.gea.esac.esa.int/Gaia/gdr3/gaia_source/">GAIA GDR3 source files</a>, and cone
+                search for stars with filters for any of the parameters listed in the GDR3 files.
 			</p>
 		</div>
+        <div class="body-info">
+            <h1>Purpose</h1>
+            <p>
+                The GAIA DR3 is the third data release from the GAIA satellite owned by the European Space Agency and the
+                ESA hosts a publicly available SQL based database that anyone can make queries to. While working on a
+                separate project involving the GAIA GDR3 source data, it was found that the remote queries to the ESA's
+                database were incredibly slow, sometimes taking more than an hour to retrieve the results of one query.
+                The ESA also does not publicly provide a copy of their database for anyone to download and so, the
+                Aurvandil project was created to fill this need. Having local access to the database allows for
+                significantly faster query times, reducing a query that would normally take hours down to a few minutes.
+            </p>
+        </div>
+        <div class="body-info">
+            <h1>Value Of PostgreSQL/HEALPix</h1>
+            <p>
+                On beginning this project, I had to select some kind of system that could hold billions of rows of data
+                with many different data type columns within each row that could be queried to find a particular row or
+                set of rows that fell under user selected criteria. The obvious choice for this was a Structured Query
+                Language (SQL) based data server. PostgreSQL is a branch of SQL server and was chosen as it has a good
+                reputation and is constantly being maintained and improved. Though the PostgreSQL server can hold the
+                billions of rows within the GAIA GDR3, making queries to search through all the rows is inefficient as
+                any query no matter how simple could take hours. This dilemma is solved by a data structure known as
+                HEALPix, an imaginary sphere divided into segments of equal area called "pixels". Using a tool such as
+                the HEALPix Java Library, coordinates can be converted to a location on this sphere and the
+                corresponding pixel can be found, allowing for the storage and retrieval of data. The subdivisions of
+                the sphere mean that only the pixels that fall within the query need to be searched, so instead of
+                searching the entire database for stars that lie within a 5 degree radius of a point, it only needs to
+                search pixels that fall within a 5 degree radius of that point.
+            </p>
+        </div>
+        <div class="body-info">
+            <h1>Future Improvements</h1>
+            <ul>
+                <li>Duplicate protection should be introduced to protect against file read errors that cause duplicates</li>
+                <li>Java's SQL library seems to have a memory hole in it somewhere, leading large queries that cover
+                several HEALPix pixel tables to become slower on each query of a table. Either switching to a more
+                optimized library or manually closing the connection after each query may solve this issue.</li>
+            </ul>
+        </div>
         <div class="body-info">
             <h1>Requirements</h1>
             <ul>
@@ -39,7 +76,7 @@
         <div class="body-info bottom-padding">
             <h1>Table of Contents</h1>
             <ul>
-                <li><a href="index.html">Overview</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="buildDestroy.html">Building and Destroying a HEALPix Sphere</a></li>
                 <li><a href="addFiles.html">Adding Files to the database</a></li>
                 <li><a href="coneSearch.html">Cone Searching the database</a></li>
@@ -49,3 +86,4 @@
 		</div>
 	</body>
 </html>
+<!-- Um9jayBUaGlzIFRvd24gLSBTdHJheSBDYXRz -->
